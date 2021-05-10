@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--autostart&loop多數瀏覽器已無效 需手動播放-->
+        <embed src="mp3/AudioLibraryFreeMusic.mp3" autostart=true loop=true>
+        <style type="text/css">
+
+nav {
+                max-width: 650px;
+                text-align: center;
+                font-size: 1.5em;
+                margin: 0.2em auto 0.1em auto;
+                color: rgb(153, 132, 255);
+                padding-top: 0.2em;
+                padding-bottom: 0.3em;
+                background-image: linear-gradient(rgb(253, 244, 158), rgb(250, 193, 119), rgb(253, 244, 158));
+                border-radius: 5px;
+            }
+            nav a:link, a:visited {
+                border-radius: 5px;
+                background-image: linear-gradient(rgb(181, 181, 219), rgb(38, 38, 176));
+                text-decoration: none;
+                padding: 0.1em 0.5em 0.2em 0.5em;
+                color: rgb(255, 255, 255);
+                text-shadow: 2px 2px 3px rgb(255, 238, 0);
+            }
+            nav a:hover {
+                color: rgb(255, 147, 108);
+                text-shadow: 1px 1px 2px rgb(193, 246, 255);
+                background-image: linear-gradient( rgb(38, 38, 176), rgb(112, 112, 232));
+            }
+            
+            html{
+                height: 100%;
+            }
+
+            body{
+                background-image: url(imgs/背景.gif);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+                background-size: cover;
+            }
+
+            h1{
+                font-size: 80px;
+                text-align: center;
+            }
+
+            h2{
+                font-size: 40px;
+                text-align: left;
+                color: rgb(179, 227, 255);
+            }
+
+            h3{
+                font-size: 30px;
+                color: rgb(255, 255, 255);
+
+            }
+
+            table{
+                width: 900px;
+                text-align: center;
+                margin: 2em auto 1em auto ;
+            }
+
+            tr{
+                height: 100px;
+            }
+
+            table, tr, th{
+                color: rgb(240, 255, 155);
+
+                border: 2.5px solid #0000ff;
+                border-collapse: collapse;
+
+            }
+        </style>            
+    </head>    
+
+    <body>
+        <h1 style = "color:#a5aeff">亞<span style = "color:rgb(163, 241, 255)"> 洲</span><span style = "color: rgb(173, 255, 210)"> 大</span><span style = "color: rgb(237, 255, 173)"> 學</span></h1>
+        <h2 style = "color:#ffa5a5; text-align: center">程式設計與智慧應用</h2>
+        <nav>
+            <a href="index.html">Home</a> | 
+            <a href="report.html">Report</a> | 
+        </nav>
+        <h2 style = "text-align: center; color: rgb(253, 255, 112);" ><marquee direction="right" height="50" scrollamount="5" behavior="alternate">「遊戲帳號登入系統」</marquee><p>
+            <img src="imgs/登入頁示意圖.jpg" width="50%"></h3>
+        <br>       
+        <ol style = "list-style-type: upper-roman;">
+            <h2><li>創作背景及動機</li></h2>
+            <h3>
+                &nbsp;&nbsp;&nbsp;&nbsp;現代資訊產業蓬勃，個人帳戶系統為網絡資安必備工具。<p>
+                &nbsp;&nbsp;&nbsp;&nbsp;本學期課程教授if、then、else等條件判斷式，其向性能很好的與此次主題相容。<p>
+                &nbsp;&nbsp;&nbsp;&nbsp;藉由條件判斷式來判斷密碼是否正確，就如同平常登入遊戲、APP等之登入介面，故此次小組決定以遊戲登入的畫面來製作與初步研究此次的專題報告。
+            </h3>
+            <h2><li>架構簡介</li></h2>
+            <h3>
+                &nbsp;&nbsp;&nbsp;&nbsp;本專題程式共有三個頁面為基本架構，登入頁面、註冊頁面、登入成功之遊戲頁面。<p>
+                &nbsp;&nbsp;&nbsp;&nbsp;以登入畫面作為起始頁面，並於三個頁面內分別但不限於內置標籤、輸入盒、密碼輸入盒 、按鈕、選單、訊息窗等UI元件。<p>
+                <P Align = center><img src="imgs/登入畫面示意圖.png" width="50%"></P>
+                <form style="text-align: center;">(登入畫面示意圖)</form>
+            </h3>
+            <h2><li>功能說明</li></h2>
+            <h3>
+                &nbsp;&nbsp;&nbsp;&nbsp;登入畫面帶有登入及註冊按鈕，點選註冊能跳轉至註冊頁面註冊帳號與密碼。所註冊之帳號、密碼將儲存於清單中並同時回傳至登入頁面之選單。<p>
+                &nbsp;&nbsp;&nbsp;&nbsp;於登入畫面之清單能快速記憶帳號，選擇清單中帳號能自動填入帳號欄位，僅需另行填寫對應密碼即可，如其配對不成功將跳出訊息窗告知帳號密碼錯誤。<p>
+            </h3>
+            <h2><li>操作說明</li></h2>
+            <h3>
+                &nbsp;&nbsp;&nbsp;&nbsp;使用者得於初始登入頁面切換至帳號註冊頁面以註冊個人帳號，註冊完成後即可切換回登入頁面做登入動作。<p>
+                &nbsp;&nbsp;&nbsp;&nbsp;登入頁面中有選單記憶其註冊之帳號，選擇使用者能快速填入對應帳號，再另行填入對應密碼即可成功登入。<p>
+                &nbsp;&nbsp;&nbsp;&nbsp;登入成功後進入遊戲頁面，其中預計包含小遊戲，於每次完成遊戲後會紀錄本帳號之最高成績。<p>
+                <P Align = center><video src="SVID_20210417_190514_1.mp4" width="30%" controls preload="auto"></video></P>
+                <form style="text-align: center;">(小遊戲示意影片)</form>
+            </h3>      
+            <h2><li>主要程式碼</li></h2>
+            <h3>
+                &nbsp;&nbsp;&nbsp;&nbsp;程式碼主要環繞於條件判斷式if、then、else。利用判斷式判斷觸是否發按鈕事件並給予對應回應、資料比對是否成功登入等。<p>
+                &nbsp;&nbsp;&nbsp;&nbsp;另外延伸出提高使用者體驗的清單功能也是需要利用到以上條件判斷式來回傳其結果。<p>
+            </h3>
+            <h2><li>結論及展望</li></h2>
+            <h3>
+                &nbsp;&nbsp;&nbsp;&nbsp;在資訊爆炸時代網絡身份如同身分證，如何加強資訊安全是做任何程式的第一步。<p>
+                &nbsp;&nbsp;&nbsp;&nbsp;研究帳號登入系統後便能更了解其組成，在往後能針對其安全缺口做日益補強且更能了解到後續選課等之學習方向。<p>
+                &nbsp;&nbsp;&nbsp;&nbsp;未來能藉由學習資料庫系統與網路安全相關知識已做融合，完成更強大的網絡安全驗證系統，在足夠健全的情況下能提供安全的金流交易平台環境等。<p>            
+            </h3>
+        </ol>
+    </body>
+</html>
