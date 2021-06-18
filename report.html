@@ -35,7 +35,7 @@ nav {
             }
 
             body{
-                background-image: url(imgs/背景.gif);
+                background-image: url(imgs/bg.gif);
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-position: center;
@@ -83,11 +83,11 @@ nav {
         <h1 style = "color:#a5aeff">亞<span style = "color:rgb(163, 241, 255)"> 洲</span><span style = "color: rgb(173, 255, 210)"> 大</span><span style = "color: rgb(237, 255, 173)"> 學</span></h1>
         <h2 style = "color:#ffa5a5; text-align: center">程式設計與智慧應用</h2>
         <nav>
-            <a href="index.html">Home</a> | 
+            <a href="1092app.html">Home</a> | 
             <a href="report.html">Report</a> | 
         </nav>
         <h2 style = "text-align: center; color: rgb(253, 255, 112);" ><marquee direction="right" height="50" scrollamount="5" behavior="alternate">「遊戲帳號登入系統」</marquee><p>
-            <img src="imgs/登入頁示意圖.jpg" width="50%"></h3>
+            <img src="imgs/login_diagram.jpg" width="50%"></h3>
         <br>       
         <ol style = "list-style-type: upper-roman;">
             <h2><li>創作背景及動機</li></h2>
@@ -100,26 +100,57 @@ nav {
             <h3>
                 &nbsp;&nbsp;&nbsp;&nbsp;本專題程式共有三個頁面為基本架構，登入頁面、註冊頁面、登入成功之遊戲頁面。<p>
                 &nbsp;&nbsp;&nbsp;&nbsp;以登入畫面作為起始頁面，並於三個頁面內分別但不限於內置標籤、輸入盒、密碼輸入盒 、按鈕、選單、訊息窗等UI元件。<p>
-                <P Align = center><img src="imgs/登入畫面示意圖.png" width="50%"></P>
+                <P Align = center><img src="imgs/schematic_diagram_of_login_screen.png" width="50%"></P>
                 <form style="text-align: center;">(登入畫面示意圖)</form>
             </h3>
             <h2><li>功能說明</li></h2>
             <h3>
-                &nbsp;&nbsp;&nbsp;&nbsp;登入畫面帶有登入及註冊按鈕，點選註冊能跳轉至註冊頁面註冊帳號與密碼。所註冊之帳號、密碼將儲存於清單中並同時回傳至登入頁面之選單。<p>
-                &nbsp;&nbsp;&nbsp;&nbsp;於登入畫面之清單能快速記憶帳號，選擇清單中帳號能自動填入帳號欄位，僅需另行填寫對應密碼即可，如其配對不成功將跳出訊息窗告知帳號密碼錯誤。<p>
+                &nbsp;&nbsp;&nbsp;&nbsp;登入畫面帶有登入及註冊按鈕，點選註冊能跳轉至註冊頁面註冊帳號與密碼。所註冊之帳號、密碼將儲存於清單中並同時回傳至登入頁面之選單。輸入帳號與密碼時，如其配對不成功將跳出訊息窗告知帳號密碼錯誤。<p>
             </h3>
             <h2><li>操作說明</li></h2>
             <h3>
                 &nbsp;&nbsp;&nbsp;&nbsp;使用者得於初始登入頁面切換至帳號註冊頁面以註冊個人帳號，註冊完成後即可切換回登入頁面做登入動作。<p>
-                &nbsp;&nbsp;&nbsp;&nbsp;登入頁面中有選單記憶其註冊之帳號，選擇使用者能快速填入對應帳號，再另行填入對應密碼即可成功登入。<p>
-                &nbsp;&nbsp;&nbsp;&nbsp;登入成功後進入遊戲頁面，其中預計包含小遊戲，於每次完成遊戲後會紀錄本帳號之最高成績。<p>
-                <P Align = center><video src="SVID_20210417_190514_1.mp4" width="30%" controls preload="auto"></video></P>
+                &nbsp;&nbsp;&nbsp;&nbsp;登入頁面中填入對應已註冊帳號與密碼即可成功登入。另有gm帳戶能開啟特別功能，輸入對應指令能觸發其相對功能，在此實作將帳戶全數清除之功能。<p>
+                &nbsp;&nbsp;&nbsp;&nbsp;登入成功後進入遊戲頁面，其中包含小遊戲，於每次完成遊戲後會紀錄本帳號之最高成績。該小遊戲能選擇使用觸控或者陀螺儀兩種操作模式，陀螺儀操作難度較高，分數計算為兩倍。<p>
+                <P Align = center><video src="game.mp4" width="30%" controls preload="auto"></video></P>
                 <form style="text-align: center;">(小遊戲示意影片)</form>
             </h3>      
             <h2><li>主要程式碼</li></h2>
             <h3>
                 &nbsp;&nbsp;&nbsp;&nbsp;程式碼主要環繞於條件判斷式if、then、else。利用判斷式判斷觸是否發按鈕事件並給予對應回應、資料比對是否成功登入等。<p>
-                &nbsp;&nbsp;&nbsp;&nbsp;另外延伸出提高使用者體驗的清單功能也是需要利用到以上條件判斷式來回傳其結果。<p>
+                &nbsp;&nbsp;&nbsp;&nbsp;另外延伸出提高使用者體驗的清單功能也是需要利用到以上條件判斷式來回傳其結果。以下將展示各頁面的程式碼構成。<p>
+                <ul>
+                        <li>主頁面-帳號比對與註冊頁回傳列表存入</li>
+                        <P Align = center><img src="imgs/account_comparison_1.png" width="50%"></P>
+                        <P Align = center><img src="imgs/account_comparison_2.png" width="50%"></P>
+                    <p>
+                        <li>主頁面-帳號刪除</li>
+                        <P Align = center><img src="imgs/account_deletion.png" width="50%"></P>
+                    <p>
+                        <li>主頁面-對話框、註冊鈕與GM指令</li>
+                        <P Align = center><img src="imgs/dialogBox_registerButton_GMInstruction.png" width="50%"></P>
+                    <p>
+                        <li>帳號註冊頁面</li>
+                        <P Align = center><img src="imgs/account_registration_page.png" width="50%"></P>
+                    <p>
+                        <li>遊戲頁面-操作模式</li>
+                        <P Align = center><img src="imgs/initialization_variable.png" width="50%"></P>
+                        <P Align = center><img src="imgs/operation_mode.png" width="50%"></P>
+                    <p>
+                        <li>遊戲頁面-玩家操作程式碼</li>
+                        <P Align = center><img src="imgs/player_operation_code.png" width="50%"></P>
+                    <p>
+                        <li>遊戲頁面-隕石重置</li>
+                        <P Align = center><img src="imgs/meteorite_reset.png" width="50%"></P>
+                    <p>
+                        <li>遊戲頁面-碰撞反應、分數紀錄與最高分顯示1</li>
+                        <P Align = center><img src="imgs/collision_reaction_1.png" width="50%"></P>
+                        <P Align = center><img src="imgs/collision_reaction_2.png" width="50%"></P>
+                        <P Align = center><img src="imgs/collision_reaction_3.png" width="50%"></P>
+                        <P Align = center><img src="imgs/collision_reaction_4.png" width="50%"></P>
+                    <p>
+                        <li>遊戲頁面-登出與重置</li>
+                        <P Align = center><img src="imgs/logout_reset.png" width="50%"></P>            
             </h3>
             <h2><li>結論及展望</li></h2>
             <h3>
